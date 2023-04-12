@@ -1,0 +1,37 @@
+#' @title Asthma Randomized Trial of Indoor-Wood Smoke Data
+#'
+#' @description A subset of the data set from a randomized trial of interventions to improve childhood asthma
+#' in homes with wood-burning stoves. The original data was collected on 115 children
+#' with asthma living in 98 eligible households. The outcomes are domain scores
+#' for Pediatric Asthma Quality of Life Questionnaire (PAQLQ) in symptoms, activity
+#' limitation and emotional function.
+#'
+#' @usage ARTIS
+#'
+#' @format A data frame with 50 rows and 6 variables:
+#' \describe{
+#'   \item{\code{homeid }}{unique id for each household}
+#'   \item{\code{intervention }}{indicator for intervention, where 0 = pre-intervention, 1=after-intervention}
+#'   \item{\code{tx }}{intervention type, where 1 = sham fiter, 2 = updated wood-burning stove, 3 = air-filter}
+#'   \item{\code{symptoms_pqol }}{PAQLQ for symtoms}
+#'   \item{\code{act_pqol }}{PAQLQ score for activity}
+#'   \item{\code{emot_pqol }}{PAQLQ score for emotional function}
+#' }
+#'
+#'
+#' @references Noonan, Curtis W., Erin O. Semmens, Paul Smith, Solomon W.
+#' Harrar, Luke Montrose, Emily Weiler, Marcy McNamara, and Tony J. Ward.
+#' "Randomized trial of interventions to improve childhood asthma in homes
+#' with wood-burning stoves."
+#' Environmental health perspectives 125, no. 9 (2017): 097010.
+#' ([PubMed](https://pubmed.ncbi.nlm.nih.gov/28935614/));
+#'
+#' @source Noonan, Curtis W., and Tony J. Ward. "Asthma randomized trial of indoor
+#' wood smoke (ARTIS): rationale and methods."
+#' Contemporary clinical trials 33, no. 5 (2012): 1080-1087.
+#'
+#' @examples
+#' data(ARTIS)
+#' head(ARTIS)
+"ARTIS"
+
