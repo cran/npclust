@@ -285,7 +285,7 @@ ncda <- function(formula,data,period,subject,indicator=NULL,Contrast=NULL){
   ############Test Procedures############
   ##Box-type
   fhat.list <- lapply(1:3, function(i){sum(diag(T.list[[i]]%*%V_N))^2/sum(diag(T.list[[i]]%*%V_N%*%T.list[[i]]%*%V_N))})
-  pvalue.box <- sapply(1:3, function(i){1-pchisq(fhat.list[[i]]*QNT.list[[i]],fhat.list[[i]])})
+  pvalue.box.list <- sapply(1:3, function(i){1-pchisq(fhat.list[[i]]*QNT.list[[i]],fhat.list[[i]])})
 
   z <- NULL
   #Formula
@@ -332,7 +332,7 @@ ncda <- function(formula,data,period,subject,indicator=NULL,Contrast=NULL){
   #Test Statistic - Default (treatment,time,interaction)
   z$TestStat.default <- round(QNT.list,4)
   #p-value - Default (treatment,time,interaction)
-  z$pvalue.default <- round(pvalue.box,4)
+  z$pvalue.default <- round(pvalue.box.list,4)
   z$indicator <- indicator
   class(z) <- "Main Results"
   z
